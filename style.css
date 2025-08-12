@@ -1,81 +1,53 @@
-/* Reset some default browser styling */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Reset */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
 
-font {
-  color: white;
-}
-
-/* Body defaults */
+/* Page */
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-  background-color: #393d3a;
-  color: #ffffff;
-  padding: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.6;
+	background: #393d3a;   /* your page grey */
+	color: #fff;
 }
 
-/* Headings */
-h1, h2, h3 {
-  margin-bottom: 0.5em;
+/* Sticky Header (full-bleed) */
+header.site-header {
+	position: sticky;
+	top: 0;
+	background: #000;
+	width: 100%;
+	z-index: 1000;
+	margin: 0;       
+  background: linear-gradient(to bottom, #000000 0%, #1a1a1a 50%, #2e2e2e 100%);
+	color: white;     /* no centering nonsense */
 }
 
-
-/* Links */
-a {
-  color: #007acc;
-  text-decoration: none;
+/* Header inner layout */
+#header1 {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 12px 16px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 150%;
 }
 
-a:hover {
-  text-decoration: underline;
-}
+/* Container for content (move padding off <body>) */
+.container { max-width: 800px; margin: 0 auto; padding: 20px; }
 
 /* Images */
+img { display: block; margin-inline: auto; max-width: 100%; height: auto; }
+#logo { height: 200px; }  /* ‘length’ is not a property */
 
-#hero {
-  height: 900px;
-  width: 1500px;
-  border-radius: 40px;
-
+/* Kill the negative vw margins */
+#changelog {
+	background: #5e5f5e;
+	border-radius: 12px;
+	margin: 20px auto;
+	padding: 16px;
+	width: min(100%, 900px);
 }
 
-img {
-	display: block;
-	margin-inline: auto;   /* centers horizontally */
-	max-width: 100%;
-	height: auto;
-}
-
-/* Container example */
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Buttons */
-button {
-  background: #007acc;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-button:hover {
-  background: #005f99;
-}
-
-
-footer {
-  padding-top: 300px;
-	position: absolute;
-
-	left: 50%;
-	transform: translate(-50%, -50%);
-
-}
+/* Footer sane */
+footer { margin: 80px auto 40px; text-align: center; opacity: 0.9; }
