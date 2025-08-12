@@ -1,34 +1,40 @@
+/* Viewport = the visible window */
 .carousel {
   position: relative;
-  overflow: hidden;      /* hides the off-screen slides */
+  overflow: hidden;     /* hides off-screen slides */
   width: 100%;
-  max-width: 600px;      /* pick a size so it doesn't expand to fit all slides */
-  margin: 1rem auto;
+  max-width: 800px;     /* pick a size you like */
+  margin: 1.5rem auto;
+  border-radius: 30px;
 }
 
+/* Long strip that moves left/right */
 .carousel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
 
+/* Each slide must equal the viewport width */
 .carousel-track img {
-  flex: 0 0 100%;        /* each slide = 100% of carousel width */
+  flex: 0 0 100%;       /* <- the crucial line */
   width: 100%;
   height: auto;
+  display: block;       /* removes baseline gap */
 }
 
-
+/* Buttons */
 .carousel button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  color: white;
-  border: none;
-  padding: 8px;
+  border: 0;
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  padding: 8px 12px;
   cursor: pointer;
-  border-radius: 50%;
+  border-radius: 999px;
+  font-size: 18px;
 }
-
 .prev { left: 10px; }
 .next { right: 10px; }
+.carousel button:disabled { opacity: 0.4; cursor: default; }
