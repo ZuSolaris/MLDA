@@ -30,12 +30,6 @@ a:hover {
 }
 
 /* Images */
-img {
-  max-width: 50%;
-  max-height: 50%;
-  height: auto;
-  display: block;
-}
 
 /* Container example */
 .container {
@@ -58,3 +52,11 @@ button:hover {
 }
 
 
+footer {
+  padding-top: 300px;
+	position: absolute;
+
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+}

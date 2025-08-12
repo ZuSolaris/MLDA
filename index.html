@@ -1,149 +1,158 @@
- <!DOCTYPE html>
-
-   <link rel="stylesheet" href="melon.css">
-   <link rel="stylesheet" href="carousel.css">
-    <script src="carousel.js"></script>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<h1>
-    ZuSolaris Dev Blog
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ZuSolaris Dev Blog</title>
 
-</h1>
-<img src="images/melon.png" alt="A smug melon" class="melon-img">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">   
 
-<style>
-  .melon-img {
-    max-width: 300px;
-    border-radius: 12px;
-  }
-</style>
 
-<title>Page Title</title>
+
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="carousel.css" />
 </head>
-
 <body>
 
-<h1>Welcome to Melon Dev Blog </h1>
+  <header class="site-header">
+    <h1>ZuSolaris Dev Blog</h1>
+    <img src="images/melon.png" alt="A smug melon" class="melon-img" />
+  </header>
 
-<div class="carousel">
-  <button class="prev">&#10094;</button>
+  <main>
+    <h2>Welcome to the Melon Dev Blog</h2>
 
-  <div class="carousel-track">
-    <img src="images/earlyearly.jpg" alt="Melon 1">
-    <img src="images/storeearly.png" alt="Melon 2">
-    <img src="images/test2.png" alt="Melon 3">
-  </div>
+    <!-- Carousel -->
+    <div class="carousel" aria-label="Screenshots carousel">
+      <button class="prev" type="button" aria-label="Previous slide">&#10094;</button>
 
-  <button class="next">&#10095;</button>
-</div>
+      <div class="carousel-track">
+        <img src="images/earlyearly.jpg" alt="Early prototype screenshot" />
+        <img src="images/storeearly.png" alt="Early store mockup" />
+        <img src="images/test3.png" alt="Testing UI layout" />
+        <img src="images/test2.png" alt="Testing UI layout" />
+        <img src="images/DOXme.jpg" alt="Testing UI layout" />
+        <img src="images/dev1.png" alt="Testing UI layout" />
+      </div>
 
+      <button class="next" type="button" aria-label="Next slide">&#10095;</button>
+    </div>
 
-<p>
-<section id="changelog" aria-labelledby="changelog-title">
-	<h2 id="changelog-title">MLDA Changelog</h2>
-	<p class="changelog-updated">Last updated: <time datetime="2025-08-12">August 12, 2025</time></p>
+    <!-- Changelog -->
+    <section id="changelog" aria-labelledby="changelog-title">
+      <h2 id="changelog-title">MLDA Changelog</h2>
+      <p class="changelog-updated">
+        Last updated: <time datetime="2025-08-12">August 12, 2025</time>
+      </p>
 
-	<article class="changelog-day">
-		<h3><time datetime="2025-07-18">July 18, 2025</time></h3>
-		<ul>
-			<li>Initial commit</li>
-			<li>Update README.md</li>
-			<li>Initial commit for melon game <em>(force push)</em></li>
-			<li>Added persistent states, added shop, added main menu, removed dedicated…</li>
-			<li>Fixed bugs that inherited all buttons, added shop log inventory…</li>
-			<li>Added melon dialogue functionality, added chat bubble placeholder…</li>
-		</ul>
-	</article>
+      <article class="changelog-day">
+        <h3><time datetime="2025-07-18">July 18, 2025</time></h3>
+        <ul>
+          <li>Initial commit</li>
+          <li>Update README.md</li>
+          <li>Initial commit for melon game <em>(force push)</em></li>
+          <li>Added persistent states, added shop, added main menu, removed dedicated…</li>
+          <li>Fixed bugs that inherited all buttons, added shop log inventory…</li>
+          <li>Added melon dialogue functionality, added chat bubble placeholder…</li>
+        </ul>
+      </article>
 
-	<article class="changelog-day">
-		<h3><time datetime="2025-07-19">July 19, 2025</time></h3>
-		<ul>
-			<li>Added dopamine bar, added decay &amp; grow multiplier for dopamine…</li>
-			<li>Added click sound, milestone sound, and milestone tracker…</li>
-			<li>Added store chime, set audio scene singleton to persist…</li>
-		</ul>
-	</article>
+      <article class="changelog-day">
+        <h3><time datetime="2025-07-19">July 19, 2025</time></h3>
+        <ul>
+          <li>Added dopamine bar, added decay &amp; grow multiplier for dopamine…</li>
+          <li>Added click sound, milestone sound, and milestone tracker…</li>
+          <li>Added store chime, set audio scene singleton to persist…</li>
+        </ul>
+      </article>
 
-	<article class="changelog-day">
-		<h3><time datetime="2025-07-21">July 21, 2025</time></h3>
-		<ul>
-			<li>Added global audio singleton and patched recursion bug</li>
-			<li>Implemented auto-click effect and click-scaling effect…</li>
-			<li>Added <code>GameSystems</code> and rerouted global Audio Manager</li>
-			<li>Created dynamic states for buyables; refactored game logic for scaling…</li>
-			<li>Added labels to buyables shop</li>
-			<li>Linked dopamine bar logic; fixed extra progress bug…</li>
-		</ul>
-	</article>
+      <article class="changelog-day">
+        <h3><time datetime="2025-07-21">July 21, 2025</time></h3>
+        <ul>
+          <li>Added global audio singleton and patched recursion bug</li>
+          <li>Implemented auto-click effect and click-scaling effect…</li>
+          <li>Added <code>GameSystems</code> and rerouted global Audio Manager</li>
+          <li>Created dynamic states for buyables; refactored game logic for scaling…</li>
+          <li>Added labels to buyables shop</li>
+          <li>Linked dopamine bar logic; fixed extra progress bug…</li>
+        </ul>
+      </article>
 
-	<article class="changelog-day">
-		<h3><time datetime="2025-07-23">July 23, 2025</time></h3>
-		<ul>
-			<li>General functionality; fixed dopamine math bug; other fixes…</li>
-			<li>Fixed visual bug via Z-index</li>
-			<li>Dopamine bar fully working</li>
-			<li>Added functional XP bar</li>
-		</ul>
-	</article>
+      <article class="changelog-day">
+        <h3><time datetime="2025-07-23">July 23, 2025</time></h3>
+        <ul>
+          <li>General functionality; fixed dopamine math bug; other fixes…</li>
+          <li>Fixed visual bug via Z-index</li>
+          <li>Dopamine bar fully working</li>
+          <li>Added functional XP bar</li>
+        </ul>
+      </article>
 
-	<article class="changelog-day">
-		<h3><time datetime="2025-07-28">July 28, 2025</time></h3>
-		<ul>
-			<li>Added Rewards Manager and shop XP requirement</li>
-		</ul>
-	</article>
+      <article class="changelog-day">
+        <h3><time datetime="2025-07-28">July 28, 2025</time></h3>
+        <ul>
+          <li>Added Rewards Manager and shop XP requirement</li>
+        </ul>
+      </article>
 
-	<article class="changelog-day">
-		<h3><time datetime="2025-08-05">August 5, 2025</time></h3>
-		<ul>
-			<li>Framework for JSON compatibility; scaffolding for single…</li>
-			<li>Additional JSON structuring; fixing effects pull on JSON…</li>
-			<li>Wired JSON effects; assessing UI visibility</li>
-		</ul>
-	</article>
+      <article class="changelog-day">
+        <h3><time datetime="2025-08-05">August 5, 2025</time></h3>
+        <ul>
+          <li>Framework for JSON compatibility; scaffolding for single…</li>
+          <li>Additional JSON structuring; fixing effects pull on JSON…</li>
+          <li>Wired JSON effects; assessing UI visibility</li>
+        </ul>
+      </article>
 
-	<article class="changelog-day">
-		<h3><time datetime="2025-08-06">August 6, 2025</time></h3>
-		<ul>
-			<li>Fixed JSON bug and reimplemented dopamine bar</li>
-		</ul>
-	</article>
+      <article class="changelog-day">
+        <h3><time datetime="2025-08-06">August 6, 2025</time></h3>
+        <ul>
+          <li>Fixed JSON bug and reimplemented dopamine bar</li>
+        </ul>
+      </article>
 
-	<article class="changelog-day">
-		<h3><time datetime="2025-08-09">August 9, 2025</time></h3>
-		<ul>
-			<li>Implemented phone UI and upgrade tree functionality</li>
-		</ul>
-	</article>
+      <article class="changelog-day">
+        <h3><time datetime="2025-08-09">August 9, 2025</time></h3>
+        <ul>
+          <li>Implemented phone UI and upgrade tree functionality</li>
+        </ul>
+      </article>
 
-	<article class="changelog-day">
-		<h3><time datetime="2025-08-10">August 10, 2025</time></h3>
-		<ul>
-			<li>Phone UX and wiring to Shop State Manager</li>
-			<li>Resolved VScroll error (snapshot)</li>
-		</ul>
-	</article>
+      <article class="changelog-day">
+        <h3><time datetime="2025-08-10">August 10, 2025</time></h3>
+        <ul>
+          <li>Phone UX and wiring to Shop State Manager</li>
+          <li>Resolved VScroll error (snapshot)</li>
+        </ul>
+      </article>
 
-	<article class="changelog-day">
-		<h3><time datetime="2025-08-11">August 11, 2025</time></h3>
-		<ul>
-			<li>Refactor: moved from dedicated phone-upgrade scene to dedicated SSCE…</li>
-			<li>Added <code>ConStore</code> and test assets</li>
-		</ul>
-	</article>
+      <article class="changelog-day">
+        <h3><time datetime="2025-08-11">August 11, 2025</time></h3>
+        <ul>
+          <li>Refactor: moved from dedicated phone-upgrade scene to dedicated SSCE…</li>
+          <li>Added <code>ConStore</code> and test assets</li>
+        </ul>
+      </article>
 
-	<article class="changelog-day">
-		<h3><time datetime="2025-08-12">August 12, 2025</time></h3>
-		<ul>
-			<li>New point for transfer</li>
-		</ul>
-	</article>
-</section>
+      <article class="changelog-day">
+        <h3><time datetime="2025-08-12">August 12, 2025</time></h3>
+        <ul>
+          <li>New point for transfer</li>
+        </ul>
+      </article>
+    </section>
+  </main>
 
-</p>
-
-
-
+  <!-- Scripts at the end for performance -->
+  <script src="carousel.js" defer></script>
 </body>
-</html> 
+
+<footer>
+    Solaris Designs 2025
+</footer>
+
+</html>
