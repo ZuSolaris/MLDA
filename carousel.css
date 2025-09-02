@@ -38,3 +38,15 @@
 .prev { left: 10px; }
 .next { right: 10px; }
 .carousel button:disabled { opacity: 0.4; cursor: default; }
+
+.sidebar-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;   /* optional: circular melon */
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.sidebar-icon:hover {
+  transform: scale(1.1) rotate(5deg);
+}
